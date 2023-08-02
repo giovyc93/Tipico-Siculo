@@ -1,0 +1,74 @@
+[
+    {
+        "NomeChiesa": " Chiesa di Sant’Agostino",
+        "Via": "Via Francesco Raimondo n.3, 90124 PA ",
+        "Immagini": {
+            "frontale": "./assets/images/Agostino1.jpg",
+            "frontale2": "./assets/images/Agostino2.jpeg",
+            "frontale3": "./assets/images/Agostino3.jpeg",
+            "frontale4": "./assets/images/Agostino4.jpg"
+        },
+        " Architettura": "lorem ipsum",
+        "Opere d arte": "lorem ipsum",
+        "Notizie Storico Critiche": "lorem ipsum",
+        "Restauri": "lorem ipsum",
+        "Bibliografia": "lorem ipsum"
+    },
+    {
+        "NomeChiesa": "Chiesa di San Mamiliano",
+        "Via": "Via Squarcialupo n.1, 90133 PA",
+        "Immagini": [
+            "https://images.app.goo.gl/hXkm6EDHdqSQdvpJ6",
+            "https://images.app.goo.gl/hXkm6EDHdqSQdvpJ6 "
+        ],
+        "Architettura": "lorem ipsum",
+        "Opere d arte": "lorem ipsum",
+        "Notizie Storico Critiche": "lorem ipsum",
+        "Restauri": "lorem ipsum",
+        "Bibliografia": "lorem ipsum"
+    },
+    {
+        "NomeChiesa": " Chiesa di Santa Maria della Pietà",
+        "Via": "Via Torremuzza n. 16, 90133 PA",
+        "Immagini": [
+            "https://images.app.goo.gl/hXkm6EDHdqSQdvpJ6 "
+        ],
+        " Architettura": "lorem ipsum",
+        "Opere d arte": "lorem ipsum",
+        "Notizie Storico Critiche": "lorem ipsum",
+        "Restauri": "lorem ipsum",
+        "Bibliografia": "lorem ipsum"
+    },
+    {
+        "NomeChiesa": "Chiesa di Santa Caterina d’Alessandria",
+        "Via": "Piazza Bellini n.1, 90133 PA",
+        "Immagini": [
+            "https://images.app.goo.gl/hXkm6EDHdqSQdvpJ6 "
+        ],
+        " Architettura": "lorem ipsum",
+        "Opere d arte": "lorem ipsum",
+        "Notizie Storico Critiche": "lorem ipsum",
+        "Restauri": "lorem ipsum",
+        "Bibliografia": "lorem ipsum"
+    },
+    {
+        "NomeChiesa": " Palermo",
+        "Via": " Palermo",
+        "Immagini": {
+            "frontale": "./assets/images/Palermo1.jpg",
+            "frontale2": "./assets/images/Palermo2.jpeg",
+            "frontale3": "./assets/images/Palermo3.jpg",
+            "frontale4": "./assets/images/Palermo4.jpg",
+            "frontale5": "./assets/images/Palermo5.jpeg",
+            "frontale6": "./assets/images/Palermo6.jpg"
+        },
+        "descrizione": [
+            "Quattro Canti",
+            "Villa Giulia",
+            "El Aziz, Castello della Zisa",
+            " Villino Florio",
+            " Palazzo Mirto",
+            "Palazzina Cinese"
+        ]
+    }
+]
