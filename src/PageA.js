@@ -1,30 +1,34 @@
 
-import Navbar from "./components/NavBar";
-import Footer from './components/Footer';
-import React, { useState, useEffect } from 'react';
+
+
 import jsonData from './File.json';
 
 import Sidebar from './components/SideBar';
+import Navbar from './components/NavBar';
+import Footer from './components/Footer';
 
-function PageA() {
-  const [Img, setImg] = useState("");
-  const [data, setData] = useState([]);
-  const imgPath =require(`${jsonData[4].Immagini.frontale1}`) ;
+function Side() {
 
-  useEffect(() => {
+  // const [Img, setImg] = useState("");
+  // const [data, setData] = useState([]);
+  const imgPath =require(`${ jsonData[0].Immagini.frontale2}`)
+  
+  console.log(imgPath);
 
-    setData(jsonData);
-    setImg(jsonData[0].Immagini.pic1)
+  // useEffect(() => {
+
+  //   setData(jsonData);
+  //   setImg(jsonData[0].Immagini.pic1)
 
 
-  }, []);
+  // }, []);
 
 
   return (
     <div className="pageA">
       <div className="navbarPageA"><Navbar/></div>
       <div className="leftSide"> </div>
-      <div className="rightSide"><img className='imagePageA' src={imgPath} alt="" /></div>
+       <div className="rightSide"><img className='imagePageA' src={imgPath} alt="" /></div> 
       <div className=""><Footer/></div>
 
     </div>
@@ -32,4 +36,4 @@ function PageA() {
   );
 }
 
-export default PageA;
+export default Side;

@@ -3,7 +3,7 @@
         "NomeChiesa": " Chiesa di Sant’Agostino",
         "Via": "Via Francesco Raimondo n.3, 90124 PA ",
         "Immagini": {
-            "frontale": "./assets/images/Agostino1.jpg",
+            "frontale": "../assets/Agostino1.jpg",
             "frontale2": "./assets/images/Agostino2.jpeg",
             "frontale3": "./assets/images/Agostino3.jpeg",
             "frontale4": "./assets/images/Agostino4.jpg"
@@ -55,7 +55,7 @@
         "NomeChiesa": " Palermo",
         "Via": " Palermo",
         "Immagini": {
-            "frontale": "./assets/images/Palermo1.jpg",
+            "frontale": "./assets/Palermo1.jpg",
             "frontale2": "./assets/images/Palermo2.jpeg",
             "frontale3": "./assets/images/Palermo3.jpg",
             "frontale4": "./assets/images/Palermo4.jpg",
