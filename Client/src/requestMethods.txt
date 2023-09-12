@@ -1,0 +1,18 @@
+// // axios
+// import axios from "axios";
+
+// // CONFIGURAZIONE
+// const localIP = window.location.hostname;
+
+
+// // RICHIESTA API PRISMED
+// export const userRequest = axios.create({
+//   baseURL: `http://localhost:5000/api/web/UsersDetails`,
+//   withCredentials: true,
+//   headers: {
+//     "Content-Type": "application/json",
+//     Authorization: "Bearer token",
+//     Accept: "application/json",
+//     "Access-Control-Allow-Origin": localIP,
+//   },
+// });
