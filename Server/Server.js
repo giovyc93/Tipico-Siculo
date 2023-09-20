@@ -51,15 +51,15 @@ app.post("/chiese", (req, res) => {
   );
 });
 
-app.put("/chiese/:name", (req, res) => {
+app.put("/chiese/:id", (req, res) => {
   const { name, city, street, style, description } = req.body;
-
+  const id = req.params.id;
   const sqlUpdate =
     "UPDATE chiese SET name=?, city=?, street=?, style=?, description=? WHERE id=?";
   
   db.query(
     sqlUpdate,
-    [name, city, street, style, description],
+    [name, city, street, style, description, id],
     (err, data) => {
       if (err) {
         console.error(err);
@@ -71,10 +71,11 @@ app.put("/chiese/:name", (req, res) => {
 });
 
 
-app.delete("/chiese/:name", (req, res) => {
-  const name = req.params.name;
-  const sqlDelete = "DELETE FROM chiese WHERE name = ?";
-  db.query(sqlDelete, [name], (err, data) => {
+app.delete("/chiese/:id", (req, res) => {
+  const id = req.params.id;
+  const sqlDelete = "DELETE FROM chiese WHERE id = ?";
+  
+  db.query(sqlDelete, [id], (err, data) => {
     if (err) {
       console.error('Error deleting data:', err);
       return res.status(500).json({ error: "An error occurred while deleting data." });
