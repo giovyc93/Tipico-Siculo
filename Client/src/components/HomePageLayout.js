@@ -3,7 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import palermo from "../assets/img/Palermo1.jpg";
 import palermo1 from "../assets/img/Palermo5.jpeg";
-import palermo2 from "../assets/img/Palermo6.jpg";
+import palermo2 from "../assets/img/Palermo7.jpg";
 import palermo3 from "../assets/img/Palermo4.jpg";
 
 gsap.registerPlugin(ScrollTrigger);

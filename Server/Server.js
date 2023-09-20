@@ -34,6 +34,8 @@ app.get("/chiese", (req, res) => {
 
 app.use(express.json());
 
+app.delete("/chiese", (req, res) => {
+
 app.post("/chiese", (req, res) => {
   const { name, city, street, style, description } = req.body;
 

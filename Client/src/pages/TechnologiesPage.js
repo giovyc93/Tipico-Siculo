@@ -12,34 +12,26 @@ const ProductsPage = () => {
   return (
     <div className="pageProducts" id="#products">
       <Navbar />
-      <h2 className="blackTitle">Le nostre tecnologie</h2>
+      {/* <h2 className="blackTitle">Le nostre tecnologie</h2> */}
       <div className="productsSection">
         <div className="cardProductsContainer">
           <CardProduct
-            titleCard="Digital Twin "
-            fotoCard={DigitalTwin}
+            titleCard="zona Ballarò "
+            fotoCard="{DigitalTwin}"
             description="Lorem ipsum dolor sit amet,  Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
           />
           <CardProduct
-            titleCard="Artificial intelligence"
-            fotoCard={AiLogo}
+            titleCard="zona Capo"
+            fotoCard="{AiLogo}"
             description="Lorem ipsum dolor sit ae commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
           />
           <CardProduct
-            titleCard="Augmented Reality"
-            fotoCard={ARLogo}
+            titleCard="zona Maqueda"
+            fotoCard="{ARLogo}"
             description="Lorem ipsum dolor sit ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
           />
-          <CardProduct
-            titleCard="Virtual Reality"
-            fotoCard={Vr}
-            description="Lorem ipsum dolor sit amet,  ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-          />
-          <CardProduct
-            titleCard="Giovanni Mucciaccia"
-            fotoCard={reactLogo}
-            description="Lorem ipsum dolor sit amet,  ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-          />
+    
+     
         </div>
       </div>
       <div className="spaceContainerMed"></div>

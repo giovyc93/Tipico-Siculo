@@ -826,8 +826,8 @@ menu li {
 }
 .teamsImage {
  
-  height: 170px;
-  width: 170px;
+  height: 220px;
+  width: 190px;
   border-radius: 100px;
 }
 .nameCard {
@@ -2374,4 +2374,12 @@ path#bottom {
 
 .loading-end rect {
   fill: #1ecd97 !important;
+}
+
+
+.dataContainer{
+height: 50vh;
+width: 80%;
+background-color: transparent;
+border: 1px solid black;
 }

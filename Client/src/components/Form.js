@@ -31,6 +31,17 @@ export const TestForm = () => {
         alert("An error occurred while sending data.");
       }
     };
+    
+  const handleDelete = async () => {
+    try {
+      // Make an Axios DELETE request to delete data
+      await axios.delete("http://localhost:5000/chiese");
+      alert("Data deleted successfully!");
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while deleting data.");
+    }
+  };
 
   return (
     <>
@@ -117,7 +128,14 @@ export const TestForm = () => {
                   className="button__content1"
                   value="invia"
                 />
-              </div>   
+             
+              </div>  
+              <input
+                  type="button"
+                  className="button__content1"
+                  value="cancella"
+                  onClick={handleDelete}
+                /> 
             </form>
           </div>
         </div>
