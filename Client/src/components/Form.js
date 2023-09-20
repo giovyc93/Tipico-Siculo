@@ -31,18 +31,38 @@ export const TestForm = () => {
         alert("An error occurred while sending data.");
       }
     };
-    
-  const handleDelete = async () => {
-    try {
-      // Make an Axios DELETE request to delete data
-      await axios.delete("http://localhost:5000/chiese");
-      alert("Data deleted successfully!");
-    } catch (error) {
-      console.error(error);
-      alert("An error occurred while deleting data.");
-    }
-  };
 
+    const handleUpdate = async () => {
+      const nameToUse = name;
+      const updatedData = {
+        name: 'Updated Name',
+        city: 'Updated City',
+        street: 'Updated Street',
+        style: 'Updated Style',
+        description: 'Updated Description'
+      };
+    
+      try {
+        await axios.put(`http://localhost:5000/chiese/${nameToUse}`, updatedData);
+        alert("Data updated successfully!");
+      } catch (error) {
+        console.error(error);
+        alert("An error occurred while updating data.");
+      }
+    };
+    
+    const nameToUse = name;  
+    const deleteUrl = `http://localhost:5000/chiese/${encodeURIComponent(nameToUse)}`;
+    console.log(nameToUse);
+    const handleDelete = async () => {
+      try {
+        await axios.delete(deleteUrl);
+        alert("Data deleted successfully!");
+      } catch (error) {
+        console.error(error);
+        alert("An error occurred while deleting data.");
+      }
+    };
   return (
     <>
       <div className="totalContainer">
@@ -135,6 +155,12 @@ export const TestForm = () => {
                   className="button__content1"
                   value="cancella"
                   onClick={handleDelete}
+                /> 
+              <input
+                  type="button"
+                  className="button__content1"
+                  value="modifica"
+                  onClick={handleUpdate}
                 /> 
             </form>
           </div>

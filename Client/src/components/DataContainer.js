@@ -13,10 +13,11 @@ const DataContainer = () => {
             try {
                 const response = await axios.get('http://localhost:5000/chiese');
                 const data1 = response.data;
-                const nomiChiese = data1.map((e) => e.name +"/")
-                const viaChiese = data1.map((e) => e.street  +"/")
-                const stileChiese = data1.map((e) => e.style  +"/")
-                const descriptionChiese = data1.map((e) => e.description  +"/")
+                const nomiChiese1 = data1.map((e) =><li>{"Nome Chiesa :"+ " " + e.name + " "+ " Via :" + e.street + " " +" Stile :" + e.style + " " +"Descrizione :"  + e.description}</li>)
+                const nomiChiese = data1.map((e) =><div className='chiese'><h2>ID :</h2> <p>{e.id}</p><h2>Nome Chiesa :</h2> <p>{e.name}</p><h2>Città :</h2> <p>{e.city}</p> <h2>Via :</h2> <p>{e.street }</p> <h2>Stile :</h2> <p>{e.style}</p> <h2>Descrizione :</h2> <p>{e.description}</p></div>)
+                // const viaChiese = data1.map((e) => <li>Via{e.street} </li>)
+                // const stileChiese = data1.map((e) => "STILI :" + " " + e.style  +"/")
+                // const descriptionChiese = data1.map((e) =>"DESCRIZIONI :" +" " + e.description  +"/")
                 // const chiese = JSON.stringify(data1);
                 setData(response.data);
                 setNomiChiese(nomiChiese)
@@ -37,9 +38,9 @@ const DataContainer = () => {
             {data ? (
                 <>
                     <p>{nomiChiese}</p>
-                    <p>{viaChiese}</p>
+                    {/* <p>{viaChiese}</p>
                     <p>{stileChiese}</p>
-                    <p>{descriptionChiese}</p>
+                    <p>{descriptionChiese}</p> */}
                 </>
             ) : (
                 'Loading data...'
