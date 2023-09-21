@@ -3,70 +3,78 @@ import axios from 'axios';
 
 export const TestForm = () => {
   const form = useRef();
-
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [street, setStreet] = useState("");
   const [style, setStyle] = useState("");
   const [description, setDescription] = useState("");
+  const [id, setId] = useState("");
+  const idToUse = id;
+  const deleteUrl = `http://localhost:5000/chiese/${encodeURIComponent(idToUse)}`;
+  const nameToUse = name; 
 
- 
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/chiese');
+      const data1 = response.data;
+      const id = data1.map((e) => e.id)
+      
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+  fetchData()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/chiese", {
+        name,
+        city,
+        street,
+        style,
+        description,
+      },);
+      console.log(response.data);
+      alert("Data sent successfully!");
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while sending data.");
+    }
+  };
 
-      try {
-        const response = await axios.post("http://localhost:5000/chiese", {
-          name,
-          city,
-          street, 
-          style,
-          description,
-        },);
+  const handleUpdate = async () => {
+    const updatedData = {
+      name: name,
+      city: city,
+      street: street,
+      style: style,
+      description: description
+    };
   
-        console.log(response.data);
-        alert("Data sent successfully!");
-      } catch (error) {
-        console.error(error);
-        alert("An error occurred while sending data.");
-      }
-    };
+    try {
+      await axios.put(`http://localhost:5000/chiese/${idToUse}`, updatedData);
+      alert("Data updated successfully!");
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while updating data.");
+    }
+  };
+  
 
-    const handleUpdate = async () => {
-      const nameToUse = name;
-      const updatedData = {
-        name: 'Updated Name',
-        city: 'Updated City',
-        street: 'Updated Street',
-        style: 'Updated Style',
-        description: 'Updated Description'
-      };
-    
-      try {
-        await axios.put(`http://localhost:5000/chiese/${nameToUse}`, updatedData);
-        alert("Data updated successfully!");
-      } catch (error) {
-        console.error(error);
-        alert("An error occurred while updating data.");
-      }
-    };
-    
-    const nameToUse = name;  
-    const deleteUrl = `http://localhost:5000/chiese/${encodeURIComponent(nameToUse)}`;
-    console.log(nameToUse);
-    const handleDelete = async () => {
-      try {
-        await axios.delete(deleteUrl);
-        alert("Data deleted successfully!");
-      } catch (error) {
-        console.error(error);
-        alert("An error occurred while deleting data.");
-      }
-    };
+  const handleDelete = async () => {
+    try {
+      await axios.delete(deleteUrl);
+      alert("Data deleted successfully!");
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while deleting data.");
+    }
+  };
   return (
     <>
       <div className="totalContainer">
-    
+
         <div className="contactUsContainer">
           <div
             className="form">
@@ -82,7 +90,7 @@ export const TestForm = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
                 <label htmlFor="" className="form__label">
-                  Nome 
+                  Nome
                 </label>
                 <div className="form__shadow"></div>
               </div>
@@ -97,7 +105,7 @@ export const TestForm = () => {
                   onChange={(e) => setCity(e.target.value)}
                 />
                 <label htmlFor="" className="form__label">
-                  Città 
+                  Città
                 </label>
                 <div className="form__shadow"></div>
               </div>
@@ -112,7 +120,7 @@ export const TestForm = () => {
                   onChange={(e) => setStreet(e.target.value)}
                 />
                 <label htmlFor="" className="form__label">
-                  Via 
+                  Via
                 </label>
                 <div className="form__shadow"></div>
               </div>
@@ -130,7 +138,7 @@ export const TestForm = () => {
                   Stile
                 </label>
                 <div className="form__shadow"></div>
-              </div> 
+              </div>
               <div className="form__boxArea">
                 <textarea
                   name="description"
@@ -148,20 +156,36 @@ export const TestForm = () => {
                   className="button__content1"
                   value="invia"
                 />
-             
-              </div>  
+
+              </div>
+            </form>
+            <form className="form__content">
+              <div className="form__box">
+                <input
+                  type="text"
+                  name="street"
+                  className="form__input"
+                  required
+                  placeholder="Id"
+                  value={id}
+                  onChange={(e) => setId(e.target.value)}
+                />
+                <label htmlFor="" className="form__label">
+                  ID
+                </label>
+              </div>
               <input
-                  type="button"
-                  className="button__content1"
-                  value="cancella"
-                  onClick={handleDelete}
-                /> 
+                type="button"
+                className="button__content1"
+                value="cancella"
+                onClick={handleDelete}
+              />
               <input
-                  type="button"
-                  className="button__content1"
-                  value="modifica"
-                  onClick={handleUpdate}
-                /> 
+                type="button"
+                className="button__content1"
+                value="modifica"
+                onClick={handleUpdate}
+              />
             </form>
           </div>
         </div>

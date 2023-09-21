@@ -14,7 +14,7 @@ const DataContainer = () => {
                 const response = await axios.get('http://localhost:5000/chiese');
                 const data1 = response.data;
                 const nomiChiese1 = data1.map((e) =><li>{"Nome Chiesa :"+ " " + e.name + " "+ " Via :" + e.street + " " +" Stile :" + e.style + " " +"Descrizione :"  + e.description}</li>)
-                const nomiChiese = data1.map((e) =><div className='chiese'><h2>ID :</h2> <p>{e.id}</p><h2>Nome Chiesa :</h2> <p>{e.name}</p><h2>Città :</h2> <p>{e.city}</p> <h2>Via :</h2> <p>{e.street }</p> <h2>Stile :</h2> <p>{e.style}</p> <h2>Descrizione :</h2> <p>{e.description}</p></div>)
+                const nomiChiese = data1.map((e) =><div className='chiese'><p>ID :</p> <h3 className='data'>{e.id}</h3><p>Nome Chiesa :</p> <h3 className='data'>{e.name}</h3><p>Città :</p> <h3 className='data'>{e.city}</h3> <p>Via :</p> <h3 className='data'>{e.street }</h3> <p>Stile :</p> <h3 className='data'>{e.style}</h3> <p>Descrizione :</p> <h3 className='data'>{e.description}</h3></div>)
                 // const viaChiese = data1.map((e) => <li>Via{e.street} </li>)
                 // const stileChiese = data1.map((e) => "STILI :" + " " + e.style  +"/")
                 // const descriptionChiese = data1.map((e) =>"DESCRIZIONI :" +" " + e.description  +"/")

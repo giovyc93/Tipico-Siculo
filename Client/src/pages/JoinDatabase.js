@@ -8,7 +8,8 @@ const ContactUsPage = () => {
   return (
     <>
       <Navbar />
-      <div className="pageContactUs" style={{ backgroundImage: `url(${arte})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+      {/* style={{ backgroundImage: `url(${arte})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} */}
+      <div className="pageContactUs" >
         <h2 className="contactUsTitle">Aggiungi una chiesa </h2>
         <Form />
     <DataContainer/>

@@ -54,9 +54,13 @@ app.post("/chiese", (req, res) => {
 app.put("/chiese/:id", (req, res) => {
   const { name, city, street, style, description } = req.body;
   const id = req.params.id;
+
   const sqlUpdate =
     "UPDATE chiese SET name=?, city=?, street=?, style=?, description=? WHERE id=?";
   
+  console.log("SQL Query:", sqlUpdate);
+  console.log("Parameters:", [name, city, street, style, description, id]);
+
   db.query(
     sqlUpdate,
     [name, city, street, style, description, id],
@@ -65,10 +69,18 @@ app.put("/chiese/:id", (req, res) => {
         console.error(err);
         return res.status(500).json({ error: "An error occurred while updating data." });
       }
+
+      console.log("Database response:", data);  // Log the database response
       return res.status(200).json({ message: "Data updated successfully." });
     }
   );
 });
+
+
+
+
+
+
 
 
 app.delete("/chiese/:id", (req, res) => {
