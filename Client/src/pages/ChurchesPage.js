@@ -4,8 +4,29 @@ import palermo2 from "../assets/img/Palermo7.jpg";
 import palermo3 from "../assets/img/Palermo4.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const ProductsPage = () => {
+  const [data, setData] = useState(null)
+    const [nomiChiese, setNomiChiese] = useState(null);
+    const [viaChiese, setViaChiese] = useState(null);
+    const [stileChiese, setStileChiese] = useState(null);
+    const [descriptionChiese, setDescriptionChiese] = useState(null);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get('http://localhost:5000/chiese');
+          setData(response.data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
+
   return (
     <div className="pageChurches" id="#products">
       <Navbar />
@@ -14,17 +35,7 @@ const ProductsPage = () => {
         <div className="churchesTexBox" >
           <h2>Descrizone Interni</h2>
           <p>
-            descrizionegjkgjhgatuòujythrejyrsssskfddafnwaofinfewafeafdewuhfwfowfhweofhewfewofhewfoewhfewof9ewhfewohfewofhewfoewhfewfhwfwhefewihfwfoihafhfewhfewfiohewafeaifhafiohefeiouhewfhefaoifefiuheafoiewahofiuhafewaoihfewaoiuadbfdbdbbfdbdfbfdnbdfbdfbdbdbfdbvcbvcbvcbvcbvcbvcbvcbcbcvbvbcbvcbvcbvcbvcbvcbvcbvcbcbcvbcbvcbvcbcbbbvcbcbvbcvcc
-            afhfuifhififyghifygfewiyfgfifugrwfiuewgffiuewgfeiuyfewgfwigfeiugfewfiuewgiufgewfiywugfewiuyfgewufewgfwfwegfdewifugwfiwugfwfugefiuywgfwiuyfgweifiug
-            fgewffugewfiuewfewifuewgfewiufgewfiuwfgiufwgfiugfifuwgfweiuyfgewifuwgfwifgfiuygfiwgefiewugfewifuewgfiuewgfifywgfwfiuyfwgwigiuwgfifgwe
-            ewfeiyfwiufhwfiwuehfewiuyfhfiuwhfgfewiufgwfwfgewfwiuyegffhewfewgiuyfgewfiewugfifwgfwgiihfwieuyfgweiuyfgweiufgewfiuyegfiuewgfiewufwuygfwe
-            wefewgfiewuygiufewgfiewufgewiufewkgfewfiuewfgiewgfiuyewgfewiuygfewugfewfewgfewiwiufgeugfgewiufgewfgiuewfguewgfwegewuygfwgfywgfewigfifuyewgfiuewgfewiugfwgfwiugfwfgwg
-            wfuwgfiewgfewfiuygewfewufgewfuewgfufgewfoywgfewogf  Loremifwewqiyfewhofiygewfiuewgfewfewgfewiuygeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-            eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-            eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-            eeeeeeeeeeeeeeeeeeeeeeeeeewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-            wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-            wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+          {data && data.length > 0 && data[1].description}
                         </p>
           <h2>Descrizone Esterni</h2>
           <p>

@@ -45,7 +45,7 @@ const Navbar = () => {
           </li> */}
         </ul>
       </div> 
-      <div className="login">
+      {/* <div className="login">
         <label className="labelNav"> Utente <input className="inputNav" /> </label>
         <label className="labelNav">  Password <input className="inputNav" /> </label>
          <div className="form__button">
@@ -53,7 +53,7 @@ const Navbar = () => {
             <input type="submit" className="button__content2" value="ACCEDI" />
           </a>
         </div>
-        </div>
+      </div> */}
       
         
     </header>

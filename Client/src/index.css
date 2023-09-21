@@ -567,7 +567,7 @@ li {
 .churchesSection {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 90%;
   gap: 30px;
   background-color: #ECE5CD;
   filter: drop-shadow(5px 5px 10px black);
@@ -2071,7 +2071,7 @@ section {
   font-family: "Montserrat", sans-serif;
 }
 .blackTitle {
-  font-size: 50px;
+  font-size: 30px;
   font-family: "Montserrat", sans-serif;
   /* color: #89c979; */
 }
@@ -2389,7 +2389,7 @@ path#bottom {
 }
 
 .churchesTexBox h2 {
-  text-align: center;
+  text-align: left;
 }
 
 .churchesTexBox p {
@@ -2398,7 +2398,7 @@ path#bottom {
 
 .churchesTexBox {
   display: flex;
-  width: 70%;
+  width: 50%;
   flex-direction: column;
   text-align: left;
   justify-content: left;
@@ -2407,6 +2407,8 @@ path#bottom {
   font-style: italic;
   font-size: large;
   padding: 20px;
+  background-color: white;
+ 
 }
 
 .churchesImg {
@@ -2419,7 +2421,7 @@ path#bottom {
 .churchesImgContainer {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 50%;
   gap: 30px;
   padding: 20px;
 }
