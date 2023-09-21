@@ -24,7 +24,6 @@ body {
   width: 100%;
   gap: 80px;
   text-align: center;
-  
 }
 .homePage {
   display: flex;
@@ -38,13 +37,13 @@ body {
 .homePage::-webkit-scrollbar {
   display: none;
 }
-.pageProducts {
+.pageChurches {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 100%;
-  gap: 40px;
+  gap: 60px;
   text-align: center;
 }
 .pageAboutUs {
@@ -63,13 +62,13 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
-  gap: 30px;
   text-align: center;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 80px;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: center, center;
+  gap: 150px;
 }
 
 .titleHome {
@@ -201,8 +200,7 @@ ul {
 .sideBar {
   margin: 0;
   align-items: center;
-  height: 100%;
-  width: 13%;
+  width: 15.3%;
   font-size: 18px;
   background: #f8f8f8;
   position: sticky;
@@ -310,12 +308,23 @@ li {
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
-  height: 60vh;
+  height: 40vh;
   background-color: #f3f7ff;
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
 }
+
+.contentDiff1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40vh;
+  background: rgb(244, 245, 229);
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
 .contentDiffRobotics {
   display: flex;
   flex-direction: row-reverse;
@@ -334,16 +343,6 @@ li {
   height: 100%;
   background-color: #f3f7ff;
   justify-content: space-around;
-  border-radius: 20px;
-}
-
-.contentDiff1 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 60vh;
-  background: rgb(244, 245, 229);
-  justify-content: space-between;
   border-radius: 20px;
 }
 
@@ -565,12 +564,13 @@ li {
   justify-content: space-around;
 }
 
-.productsSection {
+.churchesSection {
   display: flex;
-  justify-content: center;
   height: 100%;
   width: 100%;
-  
+  gap: 30px;
+  background-color: #ECE5CD;
+  filter: drop-shadow(5px 5px 10px black);
 }
 
 .cardProductsContainer {
@@ -625,7 +625,6 @@ li {
   justify-content: center;
   transition: 0.7s;
   background-color: #fafafa4f;
-
 }
 
 .fotoContProduct:hover {
@@ -773,7 +772,6 @@ li {
   width: 10%;
   transition: 0.7;
   position: relative;
-  right: 70px;
 }
 
 .logo a {
@@ -802,7 +800,7 @@ li {
   z-index: 1;
   transition: 1s;
   width: 100%;
-  gap: 80px;
+  gap: 50px;
 }
 
 menu li {
@@ -825,7 +823,6 @@ menu li {
   transform: scale(1.1);
 }
 .teamsImage {
- 
   height: 220px;
   width: 190px;
   border-radius: 100px;
@@ -1062,9 +1059,9 @@ li {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #e7f0f7;
+  background-color:#ECE5CD;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background: #f1f6ff;
+
   /* filter: drop-shadow(5px 5px 10px black); */
   margin: 0%;
   padding: 0%;
@@ -1353,7 +1350,6 @@ li {
   font-weight: 500;
   color: grey;
   font-family: "Roboto", sans-serif;
-
 }
 
 .ContactUsParagraph {
@@ -1479,27 +1475,6 @@ input.button__content {
   border-radius: 20px;
   color: black;
 }
-input.button__content1 {
-  border: 1px solid black;
-}
-
-.button__content1 {
-  padding: 1.25rem 3rem;
-  color: black;
-  display: flex;
-  transition: 0.4s;
-  border-radius: 20px;
-  box-shadow: none;
-  background-color: #C6B98F;
-  box-shadow: 5px 5px 5px black;
-  color: black;
-}
-.button__content1:hover {
-  box-shadow: none;
-  transform: scale(1.2);
-  background-color: transparent;
-  box-shadow: 5px 5px 5px black;
-}
 
 .form {
   display: flex;
@@ -1555,7 +1530,7 @@ input.button__content1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height:100vh
+  height: 100%;
 }
 
 .form__boxArea {
@@ -2161,7 +2136,7 @@ section {
 }
 .spaceContainer2 {
   width: 100%;
-  height: 10vh;
+  height: 5vh;
   /* background-color: #5D6666; */
 }
 .spaceContainerMed {
@@ -2377,32 +2352,137 @@ path#bottom {
   fill: #1ecd97 !important;
 }
 
-
-.dataContainer{
-height: 50vh;
-width: 90%;
-background-color: transparent;
-/* border: 1px solid black; */
-/* box-shadow: 5px 5px 15px 5px; */
-
+.dataContainer {
+  height: 100%;
+  width: 80%;
+  background-color: transparent;
+  border: 1px solid black;
+  /* box-shadow: 5px 5px 15px 5px; */
 }
-.chiese{
+.chiese {
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content:left;
-  gap: 30px;
+  justify-content: left;
+  gap: 20px;
   font-size: 18px;
   width: 100%;
-  padding: 10px;
-
 }
-.chiese:hover{
-  background-color: #C6B98F;
+.chiese:hover {
+  background-color: #c6b98f;
   transform: scale(1);
 }
 
+.data {
+  padding: 10px;
+  color: blue;
+}
 
-.data{
-  color : blue
+.dataTitle {
+}
+
+.dataTitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4cb848;
+}
+
+.churchesTexBox h2 {
+  text-align: center;
+}
+
+.churchesTexBox p {
+  word-wrap: break-word; /* This will cause words to break and wrap */
+}
+
+.churchesTexBox {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: large;
+  padding: 20px;
+}
+
+.churchesImg {
+  display: flex;
+  width: 100%;
+  height: auto;
+  box-shadow: 10px 10px 10px 0px;
+}
+
+.churchesImgContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 30px;
+  padding: 20px;
+}
+
+.contentBoxSide {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.animatedContainer {
+  width: 80%;
+}
+
+
+
+/* BUTTON */
+input.button__content1 {
+  border: 1px solid black;
+}
+
+.button__content1 {
+  padding: 1.25rem 3rem;
+  color: black;
+  display: flex;
+  transition: 0.4s;
+  border-radius: 20px;
+  box-shadow: none;
+  background-color: #c6b98f;
+  box-shadow: 5px 5px 5px black;
+  color: black;
+}
+.button__content1:hover {
+  box-shadow: none;
+  transform: scale(1.2);
+  background-color: transparent;
+  box-shadow: 5px 5px 5px black;
+}
+
+
+
+input.button__content2 {
+  border: 1px solid black;
+}
+
+.button__content2 {
+  padding: 0.7rem 1rem;
+  color: black;
+  display: flex;
+  transition: 0.4s;
+  border-radius: 20px;
+  box-shadow: none;
+  background-color: #c6b98f;
+  color: black;
+}
+.button__content2:hover {
+  box-shadow: none;
+  transform: scale(1.2);
+  background-color: transparent;
+  box-shadow: 5px 5px 5px black;
+}
+.login{
+  display: flex;
+  width: 20%;
+  gap: 20px;
 }

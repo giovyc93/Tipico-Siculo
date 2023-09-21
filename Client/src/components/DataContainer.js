@@ -35,6 +35,9 @@ const DataContainer = () => {
     return (
 
         <div className="dataContainer">
+            <div className='dataTitleContainer'>
+            <h2 className='dataTitle'>{data && `Lista di tutte le Chiese`}</h2><br/>
+            </div>
             {data ? (
                 <>
                     <p>{nomiChiese}</p>

@@ -154,7 +154,7 @@ export const TestForm = () => {
                 <input
                   type="submit"
                   className="button__content1"
-                  value="invia"
+                  value="Invia al Database"
                 />
 
               </div>

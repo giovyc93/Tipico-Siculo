@@ -62,8 +62,8 @@ const BackgroundPage = () => {
         <div className="bg "></div>
         <h2 className="homePageTitle"></h2>
         <div className="form__button">
-        <a className="aHome" href="/contact-us">
-          <input type="submit" className="button__content1" value="ACCEDI" />
+          <a className="aHome" href="/discover">
+            <input type="submit" className="button__content1" value="ACCEDI" />
           </a>
         </div>
       </section>

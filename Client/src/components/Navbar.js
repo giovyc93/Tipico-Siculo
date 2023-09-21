@@ -19,13 +19,13 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="aNav" href="/company">
-              Company
+            <a className="aNav" href="/discover">
+              Scopri
             </a>
           </li>
           <li>
-            <a className="aNav" href="/services">
-              Technologies
+            <a className="aNav" href="/churches">
+              Chiese
             </a>
           </li>
           <li>
@@ -34,17 +34,28 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="aNav" href="/contact-us">
-              Contact Us
+            <a className="aNav" href="/database">
+              Database
             </a>
           </li>
-          <li>
+          {/* <li>
             <a className="aNav" href="/departments">
               Departments
             </a>
-          </li>
+          </li> */}
         </ul>
-      </div>
+      </div> 
+      <div className="login">
+        <label className="labelNav"> Utente <input className="inputNav" /> </label>
+        <label className="labelNav">  Password <input className="inputNav" /> </label>
+         <div className="form__button">
+          <a className="aHome" href="/contact-us">
+            <input type="submit" className="button__content2" value="ACCEDI" />
+          </a>
+        </div>
+        </div>
+      
+        
     </header>
 
     //   <div className="navBar">
@@ -82,11 +93,7 @@ const Navbar = () => {
     //       </ul>
     //     </div>
 
-    /* <div className="formContainer" >
-        <label className="labelNav"> Utente <input className="inputNav" /> </label>
-        <label className="labelNav">  Password <input className="inputNav" /> </label>
-        <button className='buttonNav' onClick="">Accedi</button>
-      </div> */
+   
   );
 };
 
