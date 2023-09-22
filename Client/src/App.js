@@ -5,6 +5,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ChurchesPage from "./pages/ChurchesPage";
 import DiscoverPage from "./pages/DiscoverPage";
 import JoinDatabase from "./pages/JoinDatabase";
+import databaseMuseum from "./pages/DataMuseum";
 import DepartmentsPage from "./pages/DepartmentsPage";
 import RoboticPage from "./pages/PrismedRobotics";
 import DisposablePage from "./pages/PrismedDisposable";
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/discover" component={DiscoverPage} />
         <Route path="/churches" component={ChurchesPage} />
         <Route path="/database" component={JoinDatabase} />
+        <Route path="/musei" component={databaseMuseum} />
         <Route path="/departments" component={DepartmentsPage} />
         <Route path="/robotics" component={RoboticPage} />
         <Route path="/disposable" component={DisposablePage} />

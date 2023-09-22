@@ -1,8 +1,3 @@
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -20,16 +15,16 @@ function bufferToBase64(buffer) {
 
 const DataContainer = () => {
   const [data, setData] = useState(null);
-  const [datiChiese, setDatiChiese] = useState(null);
-  const [imgChiese, setImgChiese] = useState(null);
+  const [datiMusei, setDatiMusei] = useState(null);
+  const [imgMusei, setImgMusei] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/chiese');
+        const response = await axios.get('http://localhost:5000/musei');
         const data1 = response.data;
 
-        const datiChiese = data1.map((e) => (
+        const datiMusei = data1.map((e) => (
           <div className='chiese' key={e.id}>
             <p>ID :</p> <h3 className='data'>{e.id}</h3>
             <p>Nome Museo :</p> <h3 className='data'>{e.name}</h3>
@@ -39,7 +34,7 @@ const DataContainer = () => {
             {e.img && (
               <img
                 src={`data:image/jpeg;base64,${bufferToBase64(e.img)}`}
-                alt='Churches Image'
+                alt='Museum Image'
               />
             )}
             <h3 className='data'>{e.nameimg}</h3>
@@ -52,8 +47,8 @@ const DataContainer = () => {
         }));
 
         setData(response.data);
-        setDatiChiese(datiChiese);
-        setImgChiese(imgData);
+        setDatiMusei(datiMusei);
+        setImgMusei(imgData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -62,19 +57,17 @@ const DataContainer = () => {
     fetchData();
   }, []);
 
-
-
   return (
     <div className='dataContainer'>
       <div className='dataTitleContainer'>
-        <h2 className='dataTitle'>{data && `Lista Chiese`}</h2>
+        <h2 className='dataTitle'>{data && `Lista Musei`}</h2>
         <br />
       </div>
       {data ? (
         <>
-          <p>{datiChiese}</p>
-          {/* {imgChiese &&
-            imgChiese.map((imgItem) => (
+          <p>{datiMusei}</p>
+          {/* {imgMusei &&
+            imgMusei.map((imgItem) => (
               <img className='dataImg'
                 key={imgItem.id}
                 src={`data:image/jpeg;base64,${imgItem.img}`}

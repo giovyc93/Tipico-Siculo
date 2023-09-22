@@ -8,19 +8,19 @@ export const TestForm = () => {
   const [street, setStreet] = useState("");
   const [style, setStyle] = useState("");
   const [description, setDescription] = useState("");
-  const [id, setId] = useState("");
   const [img, setImg] = useState("");
   const [nameimg, setNameImg] = useState("");
+  const [id, setId] = useState("");
   const idToUse = id;
-  const deleteUrl = `http://localhost:5000/chiese/${encodeURIComponent(idToUse)}`;
-  const nameToUse = name; 
+  const deleteUrl = `http://localhost:5000/musei/${encodeURIComponent(idToUse)}`;
+  const nameToUse = name;
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/chiese');
+      const response = await axios.get('http://localhost:5000/musei');
       const data1 = response.data;
       const id = data1.map((e) => e.id)
-      
+
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -30,7 +30,7 @@ export const TestForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/chiese", {
+      const response = await axios.post("http://localhost:5000/musei", {
         name,
         city,
         street,
@@ -38,7 +38,7 @@ export const TestForm = () => {
         description,
         nameimg,
         img: img.split(',')[1]  
-      },);
+      });
       console.log(response.data);
       alert("Data sent successfully!");
     } catch (error) {
@@ -57,9 +57,9 @@ export const TestForm = () => {
       nameimg : nameimg,
       img: img 
     };
-  
+
     try {
-      await axios.put(`http://localhost:5000/chiese/${idToUse}`, updatedData);
+      await axios.put(`http://localhost:5000/musei/${idToUse}`, updatedData);
       alert("Data updated successfully!");
     } catch (error) {
       console.error(error);
@@ -78,7 +78,7 @@ export const TestForm = () => {
   
     reader.readAsDataURL(file);
   };
-  
+
 
   const handleDelete = async () => {
     try {
@@ -157,7 +157,6 @@ export const TestForm = () => {
                 </label>
                 <div className="form__shadow"></div>
               </div>
-
               <div className="form__box">
                 <input
                   type="text"

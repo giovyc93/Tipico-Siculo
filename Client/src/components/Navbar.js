@@ -38,6 +38,11 @@ const Navbar = () => {
               Database
             </a>
           </li>
+          <li>
+            <a className="aNav" href="/musei">
+              Musei
+            </a>
+          </li>
           {/* <li>
             <a className="aNav" href="/departments">
               Departments
