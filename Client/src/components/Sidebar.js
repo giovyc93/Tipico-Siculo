@@ -28,7 +28,7 @@ const Sidebar = () => {
       </div>
       <ul>
         <li></li>
-        <li>
+        {/* <li>
           <a className="lista1" href="#page">
           {data && data.length > 0 && data[0].name}
           </a>
@@ -47,7 +47,7 @@ const Sidebar = () => {
           <a className="lista1" href="#contact-us">
           {data && data.length > 0 && data[3].name}
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
