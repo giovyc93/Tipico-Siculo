@@ -528,36 +528,6 @@ a:hover {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.titles:before,
-.titles:after {
-  position: absolute;
-  top: 0;
-  width: 180px;
-  height: 12.2vh;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0),
-    rgb(233, 228, 183)
-  );
-  content: "";
-  z-index: 2;
-}
-.titles:before {
-  left: 0;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0),
-    rgb(233, 228, 183)
-  );
-}
-.titles:after {
-  right: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgb(233, 228, 183)
-  );
-}
 
 .titleRolling {
   display: inline-block;
@@ -604,6 +574,7 @@ a:hover {
   .logo {
     position: relative;
     left: 0;
+    width: 25%;
   }
   .socialBox {
     display: none;
@@ -683,5 +654,170 @@ a:hover {
   display: flex;
   padding-left: 40px;
   width: 50%;
+}
+}
+@media screen and (max-width: 500px) {
+  .centered {
+    width: 50%;
+    font-size: 15px;
+    border: 10px solid white;
+  }
+  .navigation {
+    display: flex;
+    height: 5vh;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    gap: 15px;
+  }
+  .aNav {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .logo {
+    position: relative;
+    left: 0;
+    width: 20%;
+  }
+  .socialBox {
+    display: none;
+  }
+  .linksFooter {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+  .containerTextContent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 0px;
+    color: black;
+    align-items: center;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: bold;
+    font-size: 20px;
+  }
+  .contentTitle {
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    color: #d6852d;
+  }
+  .contentParagraph {
+    margin-top: 80px;
+  }
+  .discoverContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 97vh;
+    padding: 0px 0 0px 0;
+  }
+  .discoverText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+    color: black;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    padding: 50px;
+}
+.carouselSmall {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin: 0%;
+  height: 50vh;
+  padding: 0px;
+  padding-top: 0px;
+}
+  .discoverContent1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 97vh;
+    padding: 0px 0 0px 0;
+  }
+  .discoverParagraph {
+    font-size: 13px;
+    text-align: center;
+  }
+  .discoverSubtitle {
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .carousel__img1 {
+    width: 30vh;
+    height: 30vh;
+}
+  .cardMapsContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    padding: 50px 0 50px 0;
+    gap: 80px;
+}
+  .mapDetails {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-right: 5px solid #d6852d;
+    padding-left: 0px;
+}
+.detailsItem {
+  width: 30%;
+  padding: 0px 0px 0 0;
+  text-align: center;
+}
+.teamTitle {
+  width: 100%;
+  height: 5vh;
+  padding-top: 20px;
+}
+.contentSubtitle {
+  font-size: 30px;
+  font-weight: 400;
+}
+.imgMap {
+  display: flex;
+  padding-left: 40px;
+  width: 90%;
+}
+.titles {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  white-space: nowrap;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.titleRolling img {
+  height: 30px;
+  margin: 0 40px;
+}
+.spaceContainer {
+  width: 100%;
+  height: 0vh;
+}
+.spaceContainer1 {
+  width: 100%;
+  height: 0vh;
 }
 }
