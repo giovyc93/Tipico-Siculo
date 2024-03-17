@@ -33,6 +33,7 @@ const CompanyPage = () => {
           <div className="titleContainer">
             <Title />
           </div>
+          <div className="spaceContainer"></div>
           <DiscoverContent {...data1} />
         </div>
       </div>
