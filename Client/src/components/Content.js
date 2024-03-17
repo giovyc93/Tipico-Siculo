@@ -1,22 +1,15 @@
 import React from "react";
 
 const Content = ({
-  contentImage1,
-  contentTitle1,
-  contentParagraph1,
-  classContainerDiff,
+  contentTitle,
+  contentParagraph
 }) => {
   return (
     <>
-      <div className={classContainerDiff}>
-        <div className="containerImgContent">
-          <img className="imageInside" src={contentImage1} alt="" />
-        </div>
-        <div className="containerTextContent">
-          <h1 className="contentTitle">{contentTitle1}</h1>
-          <p className="contentParagraph">{contentParagraph1}</p>
-          <a href="./">SCOPRI DI PIù</a>
-        </div>
+      <div className="containerTextContent">
+        <h2 className="contentTitle">{contentTitle}</h2>
+        <p className="contentParagraph">{contentParagraph}</p>
+        <a href="./discover">SCOPRI DI PIù</a>
       </div>
     </>
   );
