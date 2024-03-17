@@ -35,7 +35,7 @@ const HomePage = () => {
           <ProductContainer />
         </div>
         <div className="spaceContainer"></div>
-        <div className="spaceContainer"></div>
+        <div className="spaceContainer2"></div>
         <Title />
       </div>
       <Footer />
