@@ -35,7 +35,6 @@ body {
 }
 li {
   list-style: none;
-  margin: 30px 0;
 }
 .header {
   border-bottom: #414141 solid 1px;
@@ -178,15 +177,19 @@ menu li {
   justify-content: space-around;
   align-items: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 0%;
-  padding: 0%;
-  overflow: hidden;
-  /* background-image: url("./assets/img/1.jpg"); */
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0),
     rgb(233, 228, 183)
   );
+}
+.footerLink {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
 }
 
 .aNavFoot {
@@ -230,6 +233,9 @@ a:hover {
   height: 38.096px;
   font-family: "Montserrat", sans-serif;
   color: #d6852d;
+}
+.paragraph{
+  font-size: 12px;
 }
 .contentSubtitle {
   font-size: 40px;
@@ -649,7 +655,6 @@ a:hover {
   }
   .mapDetails {
     display: flex;
-
     justify-content: space-around;
     text-align: center;
     border-right: 5px solid #d6852d;
@@ -667,33 +672,40 @@ a:hover {
   }
 }
 @media screen and (max-width: 500px) {
+  .carousel__img {
+    width: 100%;
+    height: 45vh;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
   .centered {
     width: 50%;
     font-size: 15px;
-    border: 10px solid white;
+    border: 5px solid white;
+    padding: 10px;
   }
   .navigation {
     display: flex;
-    height: 5vh;
+    height: 2vh;
     justify-content: space-around;
     align-items: center;
   }
   .menu {
     display: flex;
     justify-content: center;
-    width: 80%;
-    gap: 15px;
+    width: 100%;
+    gap: 10px;
   }
   .aNav {
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 12px;
     font-family: "Montserrat", sans-serif;
   }
   .logo {
     position: relative;
-    left: 0;
-    width: 20%;
+    left: -10px;
+    width: 35%;
   }
   .socialBox {
     display: none;
@@ -706,7 +718,7 @@ a:hover {
       sans-serif;
   }
   .containerTextContent {
-    padding-top: 20px;
+    padding-top: 40px;
   }
   .contentTitle {
     font-size: 35px;
@@ -720,7 +732,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 97vh;
+    height: 90vh;
     padding: 0px 0 0px 0;
   }
   .discoverText {
@@ -764,7 +776,7 @@ a:hover {
   }
   .cardMapsContainer {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -774,9 +786,13 @@ a:hover {
   }
   .mapDetails {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    width: 100%;
+    height: 35vh;
     text-align: center;
     padding-left: 0px;
+    margin-top: 140px;
   }
   .detailsItem {
     width: 30%;
@@ -808,7 +824,7 @@ a:hover {
   }
   .imgMap {
     display: flex;
-    padding-left: 40px;
+    margin-bottom: 80px;
     width: 90%;
   }
   .titles {
@@ -830,30 +846,5 @@ a:hover {
   .spaceContainer1 {
     width: 100%;
     height: 0vh;
-  }
-}
-@media screen and (max-width: 500px) {
-  .centered {
-    width: 50%;
-    font-size: 15px;
-    border: 10px solid white;
-  }
-  .navigation {
-    display: flex;
-    height: 5vh;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .menu {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    gap: 10px;
-  }
-  .aNav {
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
   }
 }

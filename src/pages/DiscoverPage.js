@@ -29,7 +29,7 @@ const CompanyPage = () => {
       <div className="pageContent" id="#products">
         <div className="contentBox">
           <DiscoverContent {...data} />
-          <div className="spaceContainer1"></div>
+          <div className="spaceContainer2"></div>
           <div className="titleContainer">
             <Title />
           </div>
