@@ -12,11 +12,12 @@ const MapPage = () => {
                     <h2 className="contentSubtitle">Contattaci</h2>
                 </div>
                 <div className="cardMapsContainer">
-                    <MapDetails address="via Madonna di Lourdes" tel="091-----" city="Palermo" region="Sicilia" />
+                    <MapDetails mail="tipico-siculo@tipicosiculo.it" address="via Madonna di Lourdes" tel="091-----" city="Palermo" region="Sicilia" />
                     <div className="imgMap">
                         <iframe load="lazy" title="Mappa azienda" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJi-BRpO3uGRMRmYdmGqjteFs&key=AIzaSyDI5orfqNB-5gDSj8vfupH_t0b-BWZctaQ"></iframe>
                     </div>
                 </div>
+                <div className="spaceContainer2"></div>
                 <Title />
                 <div className="spaceContainer"></div>
                 <Footer />
