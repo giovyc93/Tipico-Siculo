@@ -42,7 +42,7 @@ li {
 .logo {
   position: relative;
   left: 0;
-  width: 12%;
+  width: 9%;
 }
 .logo a {
   display: block;
@@ -189,7 +189,6 @@ menu li {
   text-align: center;
   justify-content: center;
   gap: 30px;
-  padding: 20px;
 }
 
 .aNavFoot {
@@ -288,47 +287,18 @@ a:hover {
   text-align: center;
 }
 .carouselSmall {
-  margin: 0%;
-  position: relative;
-  overflow: hidden;
-  width: 50%;
+  width: 45%;
   height: 100%;
-  padding: 50px;
-  padding-top: 100px;
-}
-.carousel__btn {
-  position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 1.5rem;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  z-index: 1;
-  transition: background-color 0.3s;
-}
-.carousel__btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.carousel__btn--prev {
-  left: 0;
-}
-.carousel__btn--next {
-  right: 0;
+  padding-top: 40px;
+  margin: 50px;
 }
 .carousel__img {
   width: 100%;
-  height: 92vh;
-  display: block;
-  transition: transform 0.3s ease-in-out;
+  height: 95vh;
 }
 .carousel__img1 {
-  width: 100%;
+  width: 90%;
   height: auto;
-  display: block;
-  transition: transform 0.3s ease-in-out;
 }
 .teamTitle {
   width: 100%;
@@ -458,16 +428,12 @@ a:hover {
   width: 100%;
   height: 59vh;
   flex-direction: row;
-  gap: 40px;
-  padding: 60px 0 57px 0;
 }
 .discoverContent1 {
   display: flex;
   width: 100%;
   height: 59vh;
   flex-direction: row-reverse;
-  gap: 40px;
-  padding: 60px 0 57px 0;
 }
 .discoverText {
   display: flex;
@@ -475,13 +441,11 @@ a:hover {
   justify-content: center;
   gap: 10px;
   width: 40%;
-  font-size: 28px;
-  color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  padding: 50px;
+  margin: 50px;
 }
 .discoverImg {
-  width: 40%;
+  width: 35%;
 }
 .carousel-containerMini {
   width: 30%;
@@ -684,6 +648,9 @@ a:hover {
     display: block;
     transition: transform 0.3s ease-in-out;
   }
+  body {
+    margin: 0;
+  }
   .logo {
     position: relative;
     left: 0;
@@ -700,7 +667,7 @@ a:hover {
   .discoverParagraph {
     font-size: 14px;
     text-align: center;
-}
+  }
 }
 @media screen and (max-width: 580px) {
   .carousel__img {
@@ -773,7 +740,6 @@ a:hover {
     color: black;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
-    padding: 50px 50px 0 50px;
   }
   .carouselSmall {
     justify-content: center;
@@ -800,8 +766,10 @@ a:hover {
     text-align: center;
   }
   .carousel__img1 {
-    width: 28vh;
-    height: 28vh;
+    width: 30vh;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
   }
   .cardMapsContainer {
     display: flex;
@@ -876,11 +844,25 @@ a:hover {
     width: 100%;
     height: 0vh;
   }
-  a{
+  a {
     font-size: 12px;
   }
   .discoverParagraph {
     font-size: 18px;
     text-align: center;
+  }
 }
+@media screen and (max-width: 406px) {
+  .aNav {
+    font-size: 10px;
+  }
+  .discoverParagraph {
+    font-size: 12px;
+    text-align: center;
+  }
+  .discoverSubtitle {
+    margin-top: 40px;
+    font-size: 20px;
+    text-align: center;
+  }
 }

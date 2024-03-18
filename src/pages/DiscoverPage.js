@@ -38,10 +38,7 @@ const CompanyPage = () => {
         </div>
       </div>
       <div className="spaceContainer2"></div>
-      <div className="footerContainer">
         <Footer />
-      </div>
-
     </>
   );
 };

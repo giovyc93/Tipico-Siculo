@@ -2,7 +2,6 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <>
       <div className="footer">
         <div className="footerLink">
           <a className="linksFooter" href="/">
@@ -15,11 +14,8 @@ const Footer = () => {
             Contattaci
           </a>
         </div>
-        <div className="paragraph">
-          <p>© 2024 - 2024 Tipico Siculo - All Rights Reserved.</p>
-        </div>
+          <p className="paragraph">© 2024 - 2024 Tipico Siculo - All Rights Reserved.</p>
       </div>
-    </>
   );
 };
 export default Footer;
