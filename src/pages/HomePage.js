@@ -27,7 +27,7 @@ const HomePage = () => {
         <div className="spaceContainer"></div>
         <Content
           contentTitle="Storica azienda"
-          contentParagraph="che dal  produce condimenti e conserve siciliane, dalla Caponatina al condimento per la pasta con le sarde, passando per la salsa pronta di pomodorino ciliegino siciliano, il doppio concentrato di pomodorino, il sugo al nero"
+          contentParagraph="Dalla parte di chi cucina"
         />
         <div className="spaceContainer1"></div>
         <div className="homeProducts">
