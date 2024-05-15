@@ -7,13 +7,11 @@ const DiscoverContent = ({ classe, paragraph, title, img }) => {
         <h2 className="discoverSubtitle">{title}</h2>
         <p className="discoverParagraph">{paragraph}</p>
       </div>
-      <div className="carouselSmall">
         <img
           src={img}
           alt="panino-Sfondo-mare"
-          className="carousel__img1"
+          className="discoverImg1"
         />
-      </div>
     </div>
   )
 }

@@ -1,24 +1,21 @@
 import CardProducts from "./CardProducts"
-import CrocchettePatate from "../assets/img/Crocchette-patate.jpg";
-import Panelle from "../assets/img/Panelle-1kg.jpg";
+import Wrench from "../assets/img/wrench.png";
+import Oil from "../assets/img/oil.png";
 
 const ProductContainer = () => {
     return (
         <div className="productsContainer">
             <CardProducts
                 nameCard="Crocchè"
-                fotoCard={CrocchettePatate}
-                description="Ingredienti"
+                fotoCard={Wrench}
             />
             <CardProducts
-                nameCard="Panelle"
-                fotoCard={Panelle}
-                description="Ingredienti"
+                nameCard="Crocchè"
+                fotoCard={Oil}
             />
             <CardProducts
-                nameCard="Panelle"
-                fotoCard={Panelle}
-                description="Ingredienti"
+                nameCard="Crocchè"
+                fotoCard={Wrench}
             />
         </div>
     )

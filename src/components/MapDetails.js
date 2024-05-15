@@ -8,23 +8,23 @@ const MapDetails = ({ tel, address, city, mail }) => {
         <div className="mapDetails">
             <div className="detailsItem">
                 <img src={Phone} alt="phone" />
-                <h2 className="nameCard">tel</h2>
-                <a href={tel}>{tel}</a>
+                <h2 className="nameCard">telefono</h2>
+                <a className="nameCard1" href={tel}>{tel}</a>
             </div>
             <div className="detailsItem">
                 <img src={Mail} alt="email" />
                 <h2 className="nameCard">Email</h2>
-                <a href="{mail}">{mail}</a>
+                <a className="nameCard1" href="/aboutUs">{mail}</a>
             </div>
             <div className="detailsItem">
                 <img src={City} alt="city" />
                 <h2 className="nameCard">città</h2>
-                <a href="{city}">{city}</a>
+                <a className="nameCard1" href="/aboutUs">{city}</a>
             </div>
             <div className="detailsItem">
                 <img src={Address} alt="address" />
                 <h2 className="nameCard">Via</h2>
-                <a href="{address}">{address}</a>
+                <a className="nameCard1" href="/aboutUs">{address}</a>
 
             </div>
         </div>

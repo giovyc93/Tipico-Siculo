@@ -6,11 +6,11 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="navigation">
-        <div className="logo">
+        {/* <div className="logo">
           <a href="/">
             <img src={Logo} alt="" />
           </a>
-        </div>
+        </div> */}
         <ul className="menu">
           <li>
             <a className="aNav" href="/">
@@ -18,12 +18,12 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="aNav" href="/discover">
+            <a className="aNav" href="/Discover">
               Chi siamo
             </a>
           </li>
           <li>
-            <a className="aNav" href="/find-us">
+            <a className="aNav" href="/AboutUs">
               Contattaci
             </a>
           </li>
